@@ -85,12 +85,8 @@ fun6 :: Integer -> String -> String -> Integer -> (Integer, String); fun6 x y z 
 {- 4 -}
 
 -- use helper functions as needed
-
 -- remember to provide a function specification
-sumList [] = 0; sumList (x:xs) = x + sumList xs; 
-sum_square n = sumList [x^2 | x <- [1..n]]
-square x = x*x; square_sum n = square (sumList [x | x <- [1..n]])
-
--- sum_square 0 = 0; sum_square n = n * n + sum_square(n-1)
--- counter 1 = 1; counter n = n + counter(n - 1); square x = x*x; square_sum n = square(counter n)
-sumSquareDiff n = if n < 1 then 0 else square_sum n - sum_square n
+sumSquareDiff :: Int -> Int
+sumSquareDiff n
+        | n < 1 = 0
+        | otherwise = (sum [x | x <- [1..n]])^2 - (sum [x^2 | x <- [1..n]] )

@@ -1,0 +1,6 @@
+-- http://projecteuler.net/
+{-
+
+
+
+-}
