@@ -9,12 +9,12 @@ matrix:
   - ghc: 8.4.4
   - ghc: 8.6.5
 install:
-      ghc --version
-      cabal --version
-      cabal update
-      cabal install HUnit
+  - ghc --version
+  - cabal --version
+  - cabal update
+  - cabal install HUnit
 script:
-   - cd lab1
-   - ghc Lab1.hs Lab1Tests.hs
+  - cd lab1
+  - ghc Lab1.hs Lab1Tests.hs
 notifications:
   email: false
