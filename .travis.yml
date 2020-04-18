@@ -15,19 +15,19 @@ install:
   - cabal install HUnit
 script:
   - cd lab1
-  - ghc *
+  - ghc *.hs
   - ./Lab1Tests
   - cd ../lab2
-  - ghc *
+  - ghc *.hs
   - ./Lab2Tests
   - cd ../lab3
-  - ghc *
+  - ghc *.hs
   - ./Lab3Tests
   - cd ../lab4
-  - ghc *
+  - ghc *.hs
   - ./Lab4Tests
   - cd ../project
-  - ghc *
+  - ghc *.hs
   - ./Main
 notifications:
   email: false
