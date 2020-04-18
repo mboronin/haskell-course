@@ -1,6 +1,4 @@
--- DO NOT SUBMIT THIS FILE
-
-module Lab3Tests where
+module Main where
 
 import Prelude hiding ((++),elem,last,reverse,filter)
 
@@ -103,3 +101,4 @@ runTests = runTestTT $ TestList
     test3a, test3b, test3c, test3d, test3e, test3f, test3g, test3h, test3i,
     test4a, test4b, test4c, test4d, test4e, test4f, test4g, test4h, test4i, test4j, test4k, test4l, test4m, test4n
   ]
+main = runTests

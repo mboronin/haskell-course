@@ -1,6 +1,4 @@
--- DO NOT SUBMIT THIS FILE
-
-module Lab4Tests where
+module Main where
 
   import qualified Graph
   import qualified Lab4
@@ -36,7 +34,7 @@ module Lab4Tests where
   test3a = TestCase $ putStrLn "\ndot g1:" >> putStrLn (Lab4.dot g1)
   test3b = TestCase $ putStrLn "\ndot g2:" >> putStrLn (Lab4.dot g2)
   test3c = TestCase $ putStrLn "\ndot g3:" >> putStrLn (Lab4.dot g3)
-  {-
+  
   -- connectedComponent
   test4a = TestCase $ assertEqual "vertices (connectedComponent g1 \"a\")" ["a"] (Graph.vertices (Lab4.connectedComponent g1 "a"))
   test4b = TestCase $ assertBool "neighbors (connectedComponent g1 \"a\") \"a\"" (null $ Graph.neighbors (Lab4.connectedComponent g1 "a") "a")
@@ -44,13 +42,13 @@ module Lab4Tests where
   test4d = TestCase $ assertEqual "neighbors (connectedComponent g2 \"a\") \"a\"" 2 (length $ Graph.neighbors (Lab4.connectedComponent g2 "a") "a")
   test4e = TestCase $ assertEqual "vertices (connectedComponent g3 \"a\")" 3 (length $ Graph.vertices (Lab4.connectedComponent g3 "a"))
   test4f = TestCase $ assertEqual "neighbors (connectedComponent g3 \"a\") \"a\"" 2 (length $ Graph.neighbors (Lab4.connectedComponent g3 "a") "a")
-  -}
+  
   -- for running all the tests (type "runTests" within GHCi -- without
   -- the quotes)
   runTests = runTestTT $ TestList
     [
       test1a, test1b, test1c, test1d, test1e, test1f, test1g, test1h,
-      test3a, test3b, test3c
-      --test4a, test4b, test4c, test4d, test4e, test4f
+      test3a, test3b, test3c,
+      test4a, test4b, test4c, test4d, test4e, test4f
     ]
-  
+  main = runTests

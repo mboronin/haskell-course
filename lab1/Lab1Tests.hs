@@ -1,6 +1,4 @@
--- DO NOT SUBMIT THIS FILE
-
-module Lab1Tests where
+module Main where
 
 import Lab1
 
@@ -35,3 +33,4 @@ test4d = TestCase $ assertEqual "sumSquareDiff 1000" 250166416500 (sumSquareDiff
 -- for running all the tests (type "runTests" within GHCi -- without
 -- the quotes)
 runTests = runTestTT $ TestList [test2a, test2b, test4a, test4a, test4b, test4c, test4d]
+main = runTests

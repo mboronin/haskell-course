@@ -1,6 +1,4 @@
--- DO NOT SUBMIT THIS FILE
-
-module Lab2Tests where
+module Main where
 
 import Lab2
 
@@ -53,3 +51,4 @@ runTests = runTestTT $ TestList
     test3a, test3b, test3c, test3d, test3e, test3f, test3g, test3h, test3i, test3j, test3k, test3l, test3m, test3n, test3o,
     test4a, test4b, test4c, test4d, test4e
   ]
+main = runTests
