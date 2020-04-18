@@ -28,6 +28,5 @@ script:
   - ./Lab4Tests
   - cd ../project
   - ghc *.hs
-  - ./Main
 notifications:
   email: false
